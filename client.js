@@ -22,11 +22,20 @@ var Client = {
         var ret = checkHelper.justCheckHu(type);
         if(ret == -1)
         {
-            //console.log("no hu");
+            console.log("no hu");
         }
         else
         {
-            console.log(checkHelper.Value2HuInfo(ret));
+            var huInfo = checkHelper.Value2HuInfo(ret);
+            if(huInfo[2] == 1)
+            {
+                console.log("hu:"+JSON.stringify(huInfo) );
+            }
+            else
+            {
+                console.log("no hu");
+            }
+
         }
     },
     testTimeAy:function(time)
