@@ -433,7 +433,7 @@ var helper = {
     checkAllCardHu_One:function(ay,ret)
     {
         var value = Key_values[this.TypesAyToByte(ay)];
-        if(value)
+        if(value != void 0)
         {
             var temp = this.Value2HuInfo(value);
             ret[2] += temp[2];
